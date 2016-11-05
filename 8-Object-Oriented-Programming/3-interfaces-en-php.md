@@ -1,0 +1,1 @@
+[content in Symfony Certification file]

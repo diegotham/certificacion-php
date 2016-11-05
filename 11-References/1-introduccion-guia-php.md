@@ -1,0 +1,5 @@
+Este libro es una guía del lenguaje PHP en su versión **5.5**. Se supone que el lector ya conoce algo el lenguaje y tiene un **entorno de desarrollo** preparado para poder hacer pruebas con los ejemplos que se utilizan. Los ejemplos son básicos, simplemente para analizar los resultados que se producen en función de las sentencias establecidas.
+
+La temática se ha dividido en las mismas secciones y capítulos en los que están divididas las temáticas para el [examen de certificación Zend](http://www.zend.com/en/services/certification/php-5-certification). Es un recurso muy completo para preparar el examen, ya que trata con bastante profundidad cada uno de los conceptos exigidos. No obstante para aprobar el examen hace falta practicar e investigar las partes que se dominen menos.
+
+El libro no incluye una sección específica para los **Tipos**, por lo que no se explican aspectos básicos sobre booleanos, integers o floats. Para el examen se recomienda leer detenidamente esta sección de la [documentación oficial](http://php.net/manual/es/language.types.php).

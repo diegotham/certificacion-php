@@ -1,0 +1,15 @@
+Cuando se crea una **base de datos**, se le asigna un **propietario**, el cual es el mismo que ejecutó la sentencia que creaba la misma. Sólo él (o un superusuario) pueden manipular esa base de datos. Para que otros usuarios puedan manipularla, se les conceden privilegios.
+
+Las aplicaciones nunca se deben conectar a la base de datos mediante el propietario o un superusuario, porque tienen el **poder de ejecutar cualquier consulta**, como eliminar tablas, y si se consiguen los datos de acceso extraídos desde el código fuente se puede manipular la base de datos.
+
+Se pueden crear usuarios diferentes para cada aspecto de la aplicación, con **permisos limitados**. Lo ideal es **siempre otorgar los privilegios necesarios**, nunca excederse. De esta forma si un **atacante** consigue los datos de acceso sólo podrá manipular hasta donde estaba limitado el usuario.
+
+Se recomienda también no implementar toda la lógica de la aplicación en el script, es mejor emplear también **vistas**, **disparadores** y **reglas**. Si el sistema crece se tendrá que reimplementar la lógica de cada usuario por separado. Los disparadores hacen que puedan manejarse los campos de forma transparente y automática, lo que ayuda con el seguimiento de las transacciones o a depurar problemas de la aplicación.
+
+La mayor amenaza que puede haber, aparte de que puedan conseguir el acceso de un usuario con altos privilegios son los [ataques SQL Injection](http://diego.com.es/ataques-sql-injection-en-php).
+
+Para aumentar la seguridad a altos niveles se utilizan **conexiones sobre SSL** para encriptar las comunicaciones entre cliente y servidor, o **SSH para encriptar la conexión de red entre los clientes y el servidor de bases de datos**. Con este tipo de medidas se hace casi imposible el franquear la seguridad de los datos. SSL/SSH no protege los datos almacenados en una base de datos, sino que los protege durante el camino entre el cliente y el servidor.
+
+Si un **atacante consigue el acceso a una base de datos**, dependiendo de los privilegios del usuario que haya conseguido, tiene via libre para hacer lo que quiera. Es posible **encriptar la base de datos** pero no existen muchas que lo hagan posible. Para evitar este problema, se puede **crear un paquete de encriptación** y utilizarlo en el script de la aplicación. Se pueden utilizar extensiones como [Mcrypt](http://php.net/manual/es/ref.mcrypt.php) y [Mhash](http://php.net/manual/es/ref.mhash.php). El script puede ahora encriptar los datos antes de insertarlos en la base de datos, y los desencripta al obtenerlos.
+
+Si se quieren **guardar unos datos con la máxima seguridad** sin que tengan que ser representados en ningún momento (sin mostrarse), puede ser necesario utilizar **algoritmos hash**, como en las [contraseñas](http://diego.com.es/encriptacion-y-contrasenas-en-php).
