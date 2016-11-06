@@ -3,6 +3,8 @@
 1.  Acceder y modificar strings por caracteres
 2.  Funciones incorporadas para la extracción de strings
 
+| | | |
+| -------- | -------- |
 | **Extracción parcial** | **Extracción con array** | **Extracción de elementos** |
 | 3. substr | 6. explode | 11. trim |
 | 4. mb_substr | 7. implode | 12. ltrim |
