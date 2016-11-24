@@ -67,7 +67,7 @@ Se suele acceder a la información mediante funciones desde el **lenguaje de pro
 
 ### 2. SELECT DISTINCT
 
-La sentencia **SELECT DISTINCT** devuelve sólo **valores diferentes**.
+La sentencia **SELECT DISTINCT** devuelve registros donde los valores de todas las columnas elegidas sean **diferentes**.
 
 ```
 SELECT DISTINCT nombreColumna, nombreColumna
@@ -143,7 +143,7 @@ Los operadores **AND** y **OR** se usan para **filtrar resultados basándose en 
    
 ```
 
-También se pueden combinar los dos. Para expresiones se utilizan paréntesis:
+Podemos combinar tantas condiciones **AND** y **OR** como necesitemos. Las expresiones, para evitar errores y para facilitar la lectura, se puede agrupar utilizando paréntesis:
 
 ```
 SELECT * FROM Clientes
@@ -205,7 +205,7 @@ La sentencia **INSERT INTO** se utiliza para insertar nuevos valores en la tabla
    
 ```
 
-El valor de **ClienteID** no se facilita, es un valor que se actualiza automáticamente con un valor único para cada valor en la tabla (es AUTO_INCREMENT):
+El valor de **ClienteID** no se facilita, es un valor que se actualiza automáticamente con un valor único para cada valor en la tabla (este es el comportamiento de un campo AUTO_INCREMENT en MySQL. En otros RDBMs puede variar):
 
 ```
 INSERT INTO Clientes (NombreCliente, Ciudad, Pais)
@@ -271,11 +271,17 @@ WHERE NombreCliente='John Mars'
 ```
 
 Si lo que se quiere es **borrar todos los datos de una tabla**, se puede hacer de dos formas:
-
+Utilizando **DELETE**
 ```
 DELETE FROM Clientes;
 ////
 DELETE * FROM Clientes;
+```
+Utilizando **TRUNCATE** (Ligeramente más rápido que un DELETE)
+```
+TRUNCATE table Clientes;
+////
+TRUNCATE table Clientes;
 ```
 
 ### 9. SELECT TOP
@@ -313,7 +319,7 @@ SELECT TOP 50 PERCENT * FROM Clientes;
 
 ### 10. LIKE
 
-El **operador LIKE** se usa en una **cláusula WHERE** para buscar un **patrón** específico en una columna.
+El **operador LIKE** se usa en una **cláusula WHERE** para buscar un **patrón** específico en una columna. Por defecto este operador no es sensible a mayúsculas.
 
 ```
 SELECT nombreColumna(s)
@@ -376,6 +382,8 @@ Para **evitar varios caracteres o rangos**, se hace lo mismo añadiendo **^** o 
 SELECT * FROM Clientes
 WHERE Ciudad LIKE '[!obm]%';
 ```
+
+Nota: En MySQL 
 
 ### 12. IN
 
