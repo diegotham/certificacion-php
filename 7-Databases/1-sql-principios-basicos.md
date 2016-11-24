@@ -383,7 +383,8 @@ SELECT * FROM Clientes
 WHERE Ciudad LIKE '[!obm]%';
 ```
 
-Nota: En MySQL 
+Nota: En MySQL es necesario usar el operador **REGEXP** para filtrar usando expresiones regulares.
+Fuente [[Regular Expressions](http://dev.mysql.com/doc/refman/5.7/en/regexp.html)]
 
 ### 12. IN
 
@@ -444,7 +445,12 @@ SELECT * FROM Productos WHERE nombreProducto BETWEEN A AND M;
 Productos cuya **UltimaVenta** NO se ha producido en el mes de **octubre de 2015**:
 
 ```
-SELECT * FROM Productos WHERE UltimaVenta NOT BETWEEN #01/10/2015# AND #31/10/2015#;
+SELECT * FROM Productos WHERE UltimaVenta NOT BETWEEN '01/10/2015' AND '31/10/2015';
+```
+
+Ejemplo para MySQL (formato yyyy-mm-dd):
+```
+SELECT * FROM Productos WHERE UltimaVenta NOT BETWEEN '2015-10-01' AND '2015-10-31';
 ```
 
 Dependiendo del **sistema de bases de datos**, el **BETWEEN** puede devolver los valores delimitadores, excluirlos, o incluir sólo el primer valor delimitador.
@@ -552,6 +558,7 @@ Los **data types** más generales son:
 | BIGINT | **Integer** numérico (no decimal) de precisión 19 |
 | FLOAT(p) | **Numérico aproximado** de precisión p. Un número **float** en notación exponencial de base 10\. El argumento de precisión especifica la **precisión mínima** |
 | FLOAT | **Numérico aproximado**, precisión 16 |
+| DECIMAL(p,d) | **Numérico exacto** de precisión p y con d decimales. Util para cantidades monetarias |
 | DATE | Guarda los valores año, mes, y día |
 | TIME | Guarda los valores hora, minuto y segundo |
 | TIMESTAMP | Guarda los valores año, mes, día, hora, minuto y segundo |
@@ -736,7 +743,7 @@ La columna ClienteID es el **PRIMARY KEY** de la tabla Clientes.
 
 La columna ClienteID es el **FOREIGN KEY** de la tabla Pedidos.
 
-La restricción FOREIGN KEY se usa para **prevenir acciones que podrían romper los enlaces entre las tablas**. También evita la inserción de datos inválidos el la columna donde está el FOREIGN KEY, porque tiene que ser un valor contenido en la tabla a la que apunta.
+La restricción FOREIGN KEY se usa para **prevenir acciones que podrían romper los enlaces entre las tablas**. También evita la inserción de datos inválidos en la columna donde está el FOREIGN KEY, porque tiene que ser un valor contenido en la tabla a la que apunta.
 
 Veamos un ejemplo creando una tabla en MySQL:
 
@@ -807,7 +814,7 @@ La sentencia **CREATE INDEX** permite **crear índices en las tablas**. Permiten
 
 Los usuarios no pueden ver los índices, simplemente **se usan para mejorar el rendimiento de las búsquedas**.
 
-**Actualizar una tabla con índices lleva más tiempo que actualizan una tabla sin índices** (porque los índices también tendrán que actualizarse). Sólo se deben crear índices en las columnas y tablas **donde se vaya a buscar con frecuencia**.
+**Actualizar una tabla con índices lleva más tiempo que actualizar una tabla sin índices** (porque los índices también tendrán que actualizarse). Por defecto se crea un índice en el campo(o campos) que forman la primary key. El resto de índices debemos crearlos en las columnas  que **se utilicen para filtar con más frecuencia**.
 
 ```
 CREATE INDEX nombreIndex
@@ -890,11 +897,11 @@ Para modificar el **data type** de una columna, la sintaxis varía en función d
 ALTER TABLE nombreTabla
 ALTER COLUMN nombreColumna dataType;
 
-//// Mysql / Oracle (antes que la versión 10G)
+//// Mysql / Oracle (veriones anteriores a 10G)
 ALTER TABLE nombreTabla
 MODIFY COLUMN nombreColumna dataType;
 
-//// Oracle 10G y más adelante
+//// Oracle 10G y superiores
 ALTER TABLE nombreTabla
 MODIFY nombreColumna dataType;
 ```
@@ -931,6 +938,7 @@ Para insertar un nuevo valor en la tabla Clientes, no tendremos que especificar 
 INSERT INTO Clientes (NombreCliente, Ciudad, Telefono)
 VALUES ('Luisa Gómez', 'Cáceres', '453222736');
 ```
+En gestores de base de datos como Oracle o PostgreSQL se necesitará una secuencia que genere el siguiente valor.
 
 ### 23. Views
 
