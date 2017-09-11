@@ -59,4 +59,6 @@ Los comentarios de varias líneas finalizan con el primer */:
     echo 'Esto es un comentario'; /* Más comentario */
     */
     ?>
-    
+Anterior |  Siguiente
+---------|------------
+         | [Operadores en PHP](https://diego.com.es/operadores-en-php)
