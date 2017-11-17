@@ -45,8 +45,10 @@ function prueba()
 Otro ejemplo:
 
 ```
-function externa(){
-    function interna(){
+function externa()
+{
+    function interna()
+    {
         echo "No existo hasta que se llame a externa()";
     }
 }
@@ -67,7 +69,7 @@ Existe la recursividad en las funciones:
 ```
 function recursiva($var)
 {
-    if($var < 50){
+    if ($var < 50) {
         echo $var . "<br>";
         recursiva($var + 2);
     }
