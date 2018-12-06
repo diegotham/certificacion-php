@@ -102,16 +102,16 @@ Ejemplo:
 <?php
 $x = 14;
 $y = 8;
-echo $x ^ $y; // El valor será: 10
+echo $x ^ $y; // El valor será: 6
 ```
 
 | | | | | | | | | | |
 | -------- | -------- |
 | **Valor de posición** | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 | **Valor de $x** | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 0 | Total = 14 |
-| **Valor de $y** | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | Total = 8 |
+| **Valor de $y** | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | Total = 8 |
 
-En este caso se excluye el único bit que coincide, y el valor será la suma de los demás bits que están en $x o $y, esto es: 8 + 2 = 10.
+En este caso se excluye el único bit que coincide, y el valor será la suma de los demás bits que están en $x o $y, esto es: 4 + 2 = 6.
 
 ### 5. Operador bit a bit NOT
 
