@@ -329,7 +329,7 @@ Como vemos devuelve lo mismo que el ejemplo anterior. **PHP** simplemente reempl
 Lista de **situaciones donde puede ser necesario usar Reflection**:
 
 *   **Dynamic typing** (determinación de tipos dinámica).
-*   **Aspect Oriented Programming** recibe llamadas a métodos y emplaza código alrededor de métodos.
+*   **Aspect Oriented Programming** recibe llamadas a métodos y reemplaza código alrededor de métodos.
 *   **PHPUnit** utiliza bastante Reflection, al igual que otros mocking frameworks.
 *   **Web frameworks** usan en general Reflection para diferentes aspectos: para inicar modelos, construir objetos para views, etc. **Laravel** por ejemplo usa mucho Reflecion para inyectar dependencias.
 *   **Metaprogramming**, como los últimos ejemplos de reflexión indirecta.
