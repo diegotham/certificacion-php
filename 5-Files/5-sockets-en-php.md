@@ -9,11 +9,11 @@
 
 La **dirección IP** es la identificación de un aparato en una red, y el **puerto** es la identificación de una aplicación dentro de ese aparato. Estos dos conceptos identifican a una aplicación en un ordenador o servidor, y junto con el **protocolo** a emplear, se les denomina **socket**.
 
-Cuando enviamos un _request_ a la ip 127.0.0.1 puerto 80, se envía al **servidor** 127.0.0.1 (localhost) y el **sistema operativo** busca si tiene una aplicación con el puerto 80 asignado. Si existe, el sistema operativo reenvía el _request_ a la aplicación en concreto. Es entonces cuando la aplicación puede aceptar la conexión, que conecta con la **ip** y **puerto** que el cliente envió con el request.
+Cuando enviamos un _request_ a la ip 127.0.0.1 puerto 80, se envía al **servidor** 127.0.0.1 (localhost) y el **sistema operativo** busca si tiene una aplicación con el puerto 80 asignado. Si existe, el sistema operativo reenvía el _request_ a la aplicación en concreto. Es entonces cuando la aplicación puede aceptar la conexión, que conecta con la **ip** y **puerto** que el cliente envió con el **request**.
 
 Existen dos posibilidades para **programar con sockets en PHP**, con la [extensión Socket](http://php.net/manual/es/intro.sockets.php), con funciones muy similares a las de C, y con **stream sockets**, mediante la [extensión Stream](http://php.net/manual/es/book.stream.php), que permite enlazar y conectar a sockets de red. Vamos a analizar esta segunda forma.
 
-Los _**recursos socket**_ creados con la **extensión Stream** se pueden usar con casi todas las funciones de stream relacionadas, como _fgets()_ o _fread()_, por lo que proporcionan acceso a streams fácilmente. Todas estas funciones comienzan con _**stream_socket_***_.
+Los _**recursos socket**_ creados con la **extensión Stream** se pueden usar con casi todas las funciones de stream relacionadas, como _fgets()_ o _fread()_, por lo que proporcionan acceso a streams fácilmente. Todas estas funciones comienzan con _**stream_socket**_.
 
 ### 2. Conectar a un servidor
 
