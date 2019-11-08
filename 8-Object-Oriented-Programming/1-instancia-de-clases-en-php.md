@@ -209,7 +209,7 @@ class ClaseA
 }
 $a = new ClaseA;
 $funcion = $a->prueba;
-echo $funcion();
+echo $funcion(); // Devuelve: HOLA!
 
 ```
 
