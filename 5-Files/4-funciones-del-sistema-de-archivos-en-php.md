@@ -62,7 +62,7 @@ string 'este/es/un/directorio' (length=21)
 _string_ **realpath (**_string_ **$path)**
 ```
 
-Devuelve el **nombre de la ruta absoluta canonizada**. Expande los enlaces simbólicos y remueve los caracteres '/./', '/../' y '/' extra. No funciona en rutas que no existen.
+Devuelve el **nombre de la ruta absoluta canonizada**. Expande los enlaces simbólicos y elimina los caracteres '/./', '/../' y '/' extra. No funciona en rutas que no existen.
 
 ```
 $directorio = '../slimproject/Slim/Helper/';
