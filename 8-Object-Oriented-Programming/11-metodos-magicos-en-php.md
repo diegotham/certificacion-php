@@ -322,7 +322,7 @@ Cuando se hace una **copia de un objeto en PHP** mediante su asignación a otra 
 
 ```
 $perro1 = new stdClass;
-$perro2 = $objeto1;
+$perro2 = $perro1;
 
 $perro1->nombre = "Werthers";
 $perro2->nombre = "John";
