@@ -19,7 +19,7 @@ Existen alternativas como SOAP pero son más complejas ya que hay que aprender n
 
 En HTTP hay dos roles diferentes: **servidor** y **cliente**. En general, el cliente siempre inicia la conversación y el servidor responde. **HTTP se basa en texto**, los mensajes son básicamente bits de texto, aunque el body del mensaje puede contener otros formatos. El hecho de que sea textual lo hace **fácil de monotorizar**.
 
-Los **mensajes HTTP** están compuestos de _**headers**_ y de un _**body**_. El body puede ir vacío, contiene datos que se pueden transmitir por la red en función de las instrucciones de los headers. Los headers contienen metadatos, como información sobre la codificación de los mensajes. En el caso de un request, también contiene **métododos HTTP**.
+Los **mensajes HTTP** están compuestos de _**headers**_ y de un _**body**_. El body puede ir vacío, contiene datos que se pueden transmitir por la red en función de las instrucciones de los headers. Los headers contienen metadatos, como información sobre la codificación de los mensajes. En el caso de un request, también contiene **métodos HTTP**.
 
 En REST, los _headers_ son más importantes que el propio _body_.
 
