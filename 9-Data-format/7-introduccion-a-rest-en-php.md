@@ -216,6 +216,9 @@ Esta variable contiene la URL desde la primera /. Si el host es 'ejemplo.com', '
 
 Primero se averigua **que URL ha sido solicitada**, considerando sólo las URL que empiezan con _clients_.
 
+Esta parte no la entiendo, donde esta la aplicacion y el resto de codigo.
+Que es $paths y por que se hace el array_shift-
+Resource no deberia venir como $_SERVER['http://ejemplo.com/clientes']
 ```
 $resource = array_shift($paths);
 if($resource == 'clients'){
@@ -236,6 +239,7 @@ Sólo hay dos posibilidades:
 1.  Si el resource es _clients_, se devuelve una lista de los clientes.
 2.  Si se proporciona un identificador más, se supone que es el **nombre del cliente**, por lo que se envía a una función en concreto **dependiendo del método HTTP**. Para ello utilizamos un switch (que no se recomienda en una aplicación real):
 
+Esta parte no la entiendo. method seria $_SERVER['REQUEST_METHOD'] no ?
 ```
 switch($method){
     case 'PUT':
