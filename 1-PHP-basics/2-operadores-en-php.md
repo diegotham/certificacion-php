@@ -214,7 +214,7 @@ $valor = @$array[$key]
 
 ### 7. Operadores de ejecución
 
-El operador de ejecución `` hace que el contrenido entre las comillas invertidas se ejecute como **comando de consola**. Este operador es lo mismo que usar la functión [shell_exec()](http://php.net/manual/es/function.shell-exec.php).
+El operador de ejecución `` hace que el contenido entre las comillas invertidas se ejecute como **comando de consola**. Este operador es lo mismo que usar la functión [shell_exec()](http://php.net/manual/es/function.shell-exec.php).
 
 ```
 <?php
