@@ -209,7 +209,8 @@
 
 [php.net](http://php.net/manual/es/security.database.sql-injection.php). php.net/manual/es/security.database.sql-injection.php  
 [programmerinterview.com](http://www.programmerinterview.com/index.php/database-sql/sql-injection-example/). www.programmerinterview.com/index.php/database-sql/sql-injection-example/  
-[stackoverflow.com](http://stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php). stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php
+[stackoverflow.com](http://stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php). stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php  
+[Scaler Topics](https://www.scaler.com/topics/sql/sql-injection/). https://www.scaler.com/topics/sql/sql-injection/  
 
 **Remote Code Injection**
 
@@ -255,7 +256,8 @@
 **SQL**
 
 [php.net](http://php.net/manual/es/refs.database.vendors.php). php.net/manual/es/refs.database.vendors.php  
-[w3schools.com](http://www.w3schools.com/sql/default.asp). www.w3schools.com/sql/default.asp
+[w3schools.com](http://www.w3schools.com/sql/default.asp). www.w3schools.com/sql/default.asp  
+[Scaler Topics](https://www.scaler.com/topics/sql/). https://www.scaler.com/topics/sql/  
 
 **Joins**
 
@@ -263,7 +265,8 @@
 
 **SQL Functions**
 
-[w3schools.com](http://www.w3schools.com/sql/sql_functions.asp). www.w3schools.com/sql/sql_functions.asp
+[w3schools.com](http://www.w3schools.com/sql/sql_functions.asp). www.w3schools.com/sql/sql_functions.asp  
+[Scaler Topics](https://www.scaler.com/topics/sql/sql-string-functions/). https://www.scaler.com/topics/sql/sql-string-functions/  
 
 **Prepared Statements**
 
