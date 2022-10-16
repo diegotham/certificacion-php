@@ -168,7 +168,7 @@ if(isset($_POST["submit"]) && $_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ```
 
-Para **aceptar los datos** se ha puesto _isset($_POST["submit"])_, que crea la _**key**_ _submit_ cuando se hace click en el botón, y _$_SERVER["REQUEST_METHOD"] == "post"_, que especifica que el **método _request_** ha de ser POST. Se puede usar una de las dos formas o las dos a la vez.
+Para **aceptar los datos** se ha puesto _isset($\_POST["submit"])_, que crea la _**key**_ _submit_ cuando se hace click en el botón, y _$\_SERVER["REQUEST_METHOD"] == "post"_, que especifica que el **método _request_** ha de ser POST. Se puede usar una de las dos formas o las dos a la vez.
 
 Para **mostrar los datos**:
 
